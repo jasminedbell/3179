@@ -46,7 +46,11 @@
       ],
       "mark": {"type": "geoshape"},
       "encoding": {
-        "color": {"field": "Persons (%)", "type": "quantitative"},
+        "color": {
+          "field": "Persons (%)",
+          "type": "quantitative",
+          "scale": {"domain": [5, 30], "range": ["lightyellow", "brown"]}
+        },
         "tooltip": [
           {"field": "properties.NAME", "type": "nominal", "title": "Country"},
           {"field": "Persons (%)", "type": "quantitative"}
