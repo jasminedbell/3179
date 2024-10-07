@@ -1,41 +1,41 @@
-﻿Medicine,Year,Prescriptions Dispensed,,,,,,,,,
-Bupropion,2013,68,,,,,,,,,
-Nicotine,2013,597,,,,,,,,,
-Varenicline,2013,"1,583",,,,,,,,,
-All smoking cessation medicines,2013,"2,248",,,,,,,,,
-Bupropion,2014,68,,,,,,,,,
-Nicotine,2014,554,,,,,,,,,
-Varenicline,2014,"1,436",,,,,,,,,
-All smoking cessation medicines,2014,"2,058",,,,,,,,,
-Bupropion,2015,68,,,,,,,,,
-Nicotine,2015,599,,,,,,,,,
-Varenicline,2015,"1,423",,,,,,,,,
-All smoking cessation medicines,2015,"2,091",,,,,,,,,
-Bupropion,2016,72,,,,,,,,,
-Nicotine,2016,707,,,,,,,,,
-Varenicline,2016,"1,273",,,,,,,,,
-All smoking cessation medicines,2016,"2,052",,,,,,,,,
-Bupropion,2017,80,,,,,,,,,
-Nicotine,2017,787,,,,,,,,,
-Varenicline,2017,"1,180",,,,,,,,,
-All smoking cessation medicines,2017,"2,047",,,,,,,,,
-Bupropion,2018,86,,,,,,,,,
-Nicotine,2018,862,,,,,,,,,
-Varenicline,2018,"1,244",,,,,,,,,
-All smoking cessation medicines,2018,"2,192",,,,,,,,,
-Bupropion,2019,89,,,,,,,,,
-Nicotine,2019,906,,,,,,,,,
-Varenicline,2019,"1,210",,,,,,,,,
-All smoking cessation medicines,2019,"2,205",,,,,,,,,
-Bupropion,2020,21,,,,,,,,,
-Nicotine,2020,928,,,,,,,,,
-Varenicline,2020,"1,195",,,,,,,,,
-All smoking cessation medicines,2020,"2,144",,,,,,,,,
-Bupropion,2021,95,,,,,,,,,
-Nicotine,2021,910,,,,,,,,,
-Varenicline,2021,"1,136",,,,,,,,,
-All smoking cessation medicines,2021,"2,141",,,,,,,,,
-Bupropion,2022,303,,,,,,,,,
-Nicotine,2022,846,,,,,,,,,
-Varenicline,2022,105,,,,,,,,,
-All smoking cessation medicines,2022,"1,254",,,,,,,,,
+﻿Medicine,Year,Prescriptions Dispensed
+Bupropion,2013,68
+Nicotine,2013,597
+Varenicline,2013,"1,583"
+All smoking cessation medicines,2013,"2,248"
+Bupropion,2014,68
+Nicotine,2014,554
+Varenicline,2014,"1,436"
+All smoking cessation medicines,2014,"2,058"
+Bupropion,2015,68
+Nicotine,2015,599
+Varenicline,2015,"1,423"
+All smoking cessation medicines,2015,"2,091"
+Bupropion,2016,72
+Nicotine,2016,707
+Varenicline,2016,"1,273"
+All smoking cessation medicines,2016,"2,052"
+Bupropion,2017,80
+Nicotine,2017,787
+Varenicline,2017,"1,180"
+All smoking cessation medicines,2017,"2,047"
+Bupropion,2018,86
+Nicotine,2018,862
+Varenicline,2018,"1,244"
+All smoking cessation medicines,2018,"2,192"
+Bupropion,2019,89
+Nicotine,2019,906
+Varenicline,2019,"1,210"
+All smoking cessation medicines,2019,"2,205"
+Bupropion,2020,21
+Nicotine,2020,928
+Varenicline,2020,"1,195"
+All smoking cessation medicines,2020,"2,144"
+Bupropion,2021,95
+Nicotine,2021,910
+Varenicline,2021,"1,136"
+All smoking cessation medicines,2021,"2,141"
+Bupropion,2022,303
+Nicotine,2022,846
+Varenicline,2022,105
+All smoking cessation medicines,2022,"1,254"
