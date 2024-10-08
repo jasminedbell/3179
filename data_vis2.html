@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Style Layout</title>
+
+    <!-- Include Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main container */
+        .main-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        /* Left sidebar */
+        .sidebar {
+            width: 20%;
+            padding: 20px;
+            background-color: #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            font-size: 1.5em;
+        }
+
+        .sidebar p {
+            font-size: 1em;
+            margin: 15px 0;
+        }
+
+        /* Main content */
+        .main-content {
+            width: 55%;
+            /* Full width for the main content */
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-content h2 {
+            font-size: 2em;
+            margin-top: 0;
+        }
+
+        .main-content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Right sidebar for featured content */
+        .right-sidebar {
+            width: 20%;
+            padding: 20px;
+            background-color: #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .right-sidebar h2 {
+            font-size: 1.5em;
+        }
+
+        .right-sidebar p {
+            font-size: 1em;
+            margin: 15px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Smoking Cessation: A Nationwide Study</h1>
+        <p>A comprehensive overview of smoking cessation prescriptions in Australia</p>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Articles</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="main-container">
+        <!-- Left sidebar -->
+        <div class="sidebar">
+            <h2>Recent Posts</h2>
+            <p>Study finds significant drop in smoking rates since 2015</p>
+            <p>How different states are handling the smoking cessation crisis</p>
+            <p>The future of smoking cessation medicines</p>
+        </div>
+
+        <!-- Main content area -->
+        <div class="main-content">
+            <h2>Exploring the Impact of Smoking Cessation Medicines</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae purus ac nulla consectetur
+                fringilla. Fusce venenatis, ipsum sit amet fermentum luctus, libero augue sagittis eros, vitae fermentum
+                enim lacus a orci. Sed cursus, eros vel tincidunt eleifend, libero ipsum efficitur nisl, ut auctor est
+                urna id purus. Nulla facilisi. Nam at turpis eget lectus sollicitudin dapibus.</p>
+            <p>Proin auctor urna non diam viverra, non lacinia dui interdum. Praesent posuere elit eu dui gravida, nec
+                gravida augue congue. Nulla facilisi. Nam at turpis eget lectus sollicitudin dapibus. Proin auctor urna
+                non diam viverra, non lacinia dui interdum. Praesent posuere elit eu dui gravida, nec gravida augue
+                congue.</p>
+
+            <!-- First Visualization Section -->
+            <h3>Smoking Cessation Prescriptions by Year and State</h3>
+            <div id="visualisation" style="width: 100%;"></div>
+
+            <!-- Add random text below the map -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget libero nec purus pharetra eleifend.
+                Aenean vel nisi vel libero viverra blandit. Donec ultricies justo nec tellus.</p>
+
+            <!-- Second Visualization Section -->
+            <h3>Smoking Cessation Prescriptions by Remoteness Area</h3>
+            <div id="second-visualisation" style="width: 100%;""></div> 
+
+            <!-- Add random text below the map -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget libero nec purus pharetra eleifend. Aenean vel nisi vel libero viverra blandit. Donec ultricies justo nec tellus.</p>
+            
+            <!-- Third Visualization Section -->
+            <h3>Smoking Cessation Medicine Trends</h3>
+            <div id="third-visualisation" style="width: 100%;"></div>
+
+            <!-- Add random text below the map -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget libero nec purus pharetra eleifend.
+                Aenean vel nisi vel libero viverra blandit. Donec ultricies justo nec tellus.</p>
+
+            <!-- Fourth Visualization Section -->
+            <h3>Smoking Cessation Prescriptions by Gender and Age Bracket</h3>
+            <div id="fourth-visualisation" style="width: 100%;"></div>
+
+        </div>
+
+        <!-- Right sidebar for featured content -->
+        <div class="right-sidebar">
+            <h2>Featured Articles</h2>
+            <p>Prescriptions by year: How have numbers changed over time?</p>
+            <p>State-by-state analysis: Where are we seeing the highest growth?</p>
+            <p>Breakdown of most prescribed medicines</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Visualisation by Jasmine Bell. Data sourced from the Australian Institute of Health and Welfare.</p>
+    </footer>
+
+    <script>
+        // First Visualization: Map of Prescriptions by Year and State
+        var spec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": "container",
+            "height": 400,
+            "params": [
+                {
+                    "name": "Year_selection",
+                    "value": 2022,
+                    "bind": {
+                        "input": "range",
+                        "min": 2013,
+                        "max": 2022,
+                        "step": 1,
+                        "name": "Year: "
+                    }
+                }
+            ],
+            "data": {
+                "url": "https://raw.githubusercontent.com/jasminedbell/3179/refs/heads/main/aus_borders.json",
+                "format": {
+                    "type": "topojson",
+                    "feature": "STE_2016_AUST"
+                }
+            },
+            "transform": [
+                {
+                    "lookup": "properties.STE_NAME16",
+                    "from": {
+                        "data": {
+                            "url": "https://raw.githubusercontent.com/jasminedbell/3179/refs/heads/main/states_prescriptions.csv"
+                        },
+                        "key": "State/Territory",
+                        "fields": ["Prescriptions", "Year"]
+                    }
+                },
+                {
+                    "filter": "datum.Year == Year_selection"
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "stroke": "white",
+                "strokeWidth": 0.5
+            },
+            "encoding": {
+                "color": {
+                    "field": "Prescriptions",
+                    "type": "quantitative",
+                    "scale": {
+                        "scheme": "greens"
+                    },
+                    "legend": {
+                        "title": "Prescriptions (per 100,000 population)",
+                        "orient": "bottom",
+                        "direction": "horizontal",
+                        "offset": 10,
+                        "gradientLength": 250,
+                        "titleLimit": 500
+                    }
+                },
+                "tooltip": [
+                    { "field": "properties.STE_NAME16", "type": "nominal", "title": "State/Territory" },
+                    { "field": "Prescriptions", "type": "quantitative", "title": "Prescriptions" },
+                    { "field": "Year", "type": "ordinal", "title": "Year" }
+                ]
+            },
+            "projection": {
+                "type": "mercator"
+            }
+        }
+            ;
+
+        // Embed the first visualization in the #visualisation div
+        vegaEmbed('#visualisation', spec).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        // Second Visualization: Smoking Cessation Prescriptions by Area
+        var secondSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "description": "Stacked area chart showing prescriptions by region over time with specific colors for each region.",
+            "data": {
+                "url": "https://raw.githubusercontent.com/jasminedbell/3179/refs/heads/main/prescriptions_by_region.csv",
+                "format": { "type": "csv" }
+            },
+            "mark": "area",
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "temporal",
+                    "title": "Year",
+                    "timeUnit": "year",
+                    "axis": { "grid": false }  // Disables gridlines for the x-axis
+                },
+                "y": {
+                    "field": "Prescriptions",
+                    "type": "quantitative",
+                    "title": "Prescriptions (per 100,000 population)",
+                    "axis": { "grid": false }  // Disables gridlines for the y-axis
+                },
+                "color": {
+                    "field": "Remoteness area",
+                    "type": "nominal",
+                    "title": "Remoteness Area",
+                    "scale": {
+                        "domain": [
+                            "Major cities",
+                            "Inner regional",
+                            "Outer regional",
+                            "Remote",
+                            "Very remote"
+                        ],
+                        "range": ["#810f7c", "#8856a7", "#8c96c6", "#b3cde3", "#edf8fb"]
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Year",
+                        "type": "temporal",
+                        "title": "Financial Year",
+                        "timeUnit": "year"
+                    },
+                    {
+                        "field": "Remoteness area",
+                        "type": "nominal",
+                        "title": "Remoteness Area"
+                    },
+                    {
+                        "field": "Prescriptions",
+                        "type": "quantitative",
+                        "title": "Prescriptions"
+                    }
+                ]
+            },
+            "config": { "area": { "line": true, "opacity": 0.7 } }
+        }
+            ;
+
+        // Embed the second visualization in the #second-visualisation div
+        vegaEmbed('#second-visualisation', secondSpec).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+        // Third Visualization: Smoking Cessation Medicine Trends
+        var thirdSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "description": "A dashboard with cross-highlighting.",
+            "config": {
+                "font": "Arial",
+                "title": {
+                    "font": "Arial"
+                },
+                "axis": {
+                    "labelFont": "Arial",
+                    "titleFont": "Arial"
+                },
+                "legend": {
+                    "labelFont": "Arial",
+                    "titleFont": "Arial"
+                }
+            },
+            "hconcat": [
+                {
+                    "title": "Total Prescriptions for All Smoking Cessation Medicines",
+                    "width": 300,
+                    "height": 150,
+                    "data": {
+                        "url": "https://raw.githubusercontent.com/jasminedbell/3179/refs/heads/main/total_cessation_prescriptions.csv"
+                    },
+                    "selection": {
+                        "highlight": {
+                            "type": "single",
+                            "fields": ["Year"]
+                        }
+                    },
+                    "mark": {
+                        "type": "bar",
+                        "fill": "#8c510a",
+                        "cursor": "pointer"
+                    },
+                    "encoding": {
+                        "x": {
+                            "field": "Year",
+                            "type": "ordinal",
+                            "title": "Financial Year"
+                        },
+                        "y": {
+                            "field": "Prescriptions",
+                            "type": "quantitative",
+                            "title": "Prescriptions (per 100,000 population)",
+                            "axis": {"grid": false}
+                        },
+                        "color": {
+                            "condition": {
+                                "selection": "highlight",
+                                "value": "steelblue"
+                            },
+                            "value": "#e9a3c9"
+                        },
+                        "opacity": {
+                            "condition": {
+                                "selection": "highlight",
+                                "value": 1
+                            },
+                            "value": 0.2
+                        },
+                        "tooltip": [
+                            { "field": "Year", "title": "Financial Year" },
+                            { "field": "Prescriptions", "title": "Prescriptions" }
+                        ]
+                    }
+                },
+                {
+                    "vconcat": [
+                        {
+                            "title": "Prescriptions for Each Cessation Medicine",
+                            "data": {
+                                "url": "https://raw.githubusercontent.com/jasminedbell/3179/refs/heads/main/cessation_medicine_dispenses.csv"
+                            },
+                            "mark": "rect",
+                            "encoding": {
+                                "x": {
+                                    "field": "Year",
+                                    "type": "ordinal",
+                                    "title": "Financial Year"
+                                },
+                                "y": {
+                                    "field": "Medicine",
+                                    "type": "nominal"
+                                },
+                                "color": {
+                                    "field": "Prescriptions",
+                                    "type": "quantitative",
+                                    "legend": {
+                                        "title": "Prescriptions",
+                                        "direction": "horizontal",
+                                        "gradientLength": 120,
+                                        "orient": "right"
+                                    },
+                                    "scale": {
+                                        "domain": [20, 1600],
+                                        "range": ["#fde0dd", "#fa9fb5", "#c51b8a"]
+                                    }
+                                },
+                                "opacity": {
+                                    "condition": {
+                                        "selection": "highlight",
+                                        "value": 1
+                                    },
+                                    "value": 0.2
+                                },
+                                "tooltip": [
+                                    { "field": "Year", "title": "Financial Year" },
+                                    { "field": "Medicine", "title": "Medicine" },
+                                    { "field": "Prescriptions", "title": "Prescriptions" }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+
+
+            ;
+
+        // Embed the third visualization in the #second-visualisation div
+        vegaEmbed('#third-visualisation', thirdSpec).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+
+        // Fourth Visualization: Smoking Cessation Prescriptions between genders
+        var fourthSpec = {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "width": "container",
+            "height": 300,
+            "data": {
+                "url": "https://raw.githubusercontent.com/jasminedbell/3179/refs/heads/main/prescriptions_by_gender_standardised.csv"
+            },
+            "params": [
+                {
+                    "name": "Age_bracket",
+                    "value": "Total",
+                    "bind": {
+                        "input": "select",
+                        "options": [
+                            "Less than 18",
+                            "18 to 24",
+                            "25 to 29",
+                            "30 to 39",
+                            "40 to 49",
+                            "50 to 59",
+                            "60 to 69",
+                            "70 to 79",
+                            "80+",
+                            "Total"
+                        ],
+                        "labels": [
+                            "Less than 18",
+                            "18 to 24",
+                            "25 to 29",
+                            "30 to 39",
+                            "40 to 49",
+                            "50 to 59",
+                            "60 to 69",
+                            "70 to 79",
+                            "80+",
+                            "Total"
+                        ],
+                        "name": "Age Bracket: "
+                    }
+                }
+            ],
+            "transform": [
+                {
+                    "filter": "Age_bracket == null || datum.Age_Range == Age_bracket"
+                }
+            ],
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "ordinal",
+                    "title": "Financial Year",
+                    "axis": { "domain": false, "labelAngle": 0 }
+                },
+                "y": {
+                    "field": "Prescriptions",
+                    "type": "quantitative",
+                    "title": "Prescriptions (per 100,000 population)",
+                    "axis": { "tickCount": 5, "grid": false }
+                }
+            },
+            "layer": [
+                {
+                    "mark": { "type": "line" },
+                    "encoding": {
+                        "color": {
+                            "field": "Gender",
+                            "type": "nominal",
+                            "scale": {
+                                "domain": [
+                                    "Female",
+                                    "Male"
+                                ],
+                                "range": [
+                                    "#ff7f00",
+                                    "#377eb8"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "mark": "circle",
+                    "encoding": {
+                        "color": {
+                            "field": "Gender",
+                            "type": "nominal",
+                            "scale": {
+                                "domain": [
+                                    "Female",
+                                    "Male"
+                                ],
+                                "range": [
+                                    "#ff7f00",
+                                    "#377eb8"
+                                ]
+                            }
+                        },
+                        "tooltip": [
+                            { "field": "Year", "type": "ordinal" },
+                            { "field": "Prescriptions", "type": "quantitative" },
+                            { "field": "Gender", "type": "nominal" },
+                            { "field": "Age_Range", "type": "nominal", "title": "Age Bracket" }
+                        ]
+                    }
+                },
+                {
+                    "transform": [
+                        {
+                            "aggregate": [{ "op": "max", "field": "Prescriptions", "as": "Max_Prescriptions" }],
+                            "groupby": ["Gender"]
+                        },
+                        {
+                            "joinaggregate": [
+                                { "op": "max", "field": "Prescriptions", "as": "Max_Prescriptions" }
+                            ],
+                            "groupby": ["Year", "Gender"]
+                        },
+                        {
+                            "filter": "datum.Prescriptions == datum.Max_Prescriptions"
+                        }
+                    ],
+                    "mark": {
+                        "type": "text",
+                        "align": "left",
+                        "dx": 5,
+                        "dy": -10,
+                        "fontStyle": "italic",
+                        "fontSize": 12
+                    },
+                    "encoding": {
+                        "x": { "field": "Year", "type": "ordinal" },
+                        "y": { "field": "Prescriptions", "type": "quantitative" },
+                        "text": { "value": "Max Prescriptions" }
+                    }
+                },
+                {
+                    "transform": [
+                        {
+                            "filter": "Age_bracket == 'Total' && datum.Year == '2022' && datum.Gender == 'Female'"
+                        }
+                    ],
+                    "mark": {
+                        "type": "text",
+                        "align": "left",
+                        "dx": -60,
+                        "dy": 15,
+                        "fontSize": 12,
+                        "fontStyle": "italic",
+                        "color": "grey"
+                    },
+                    "encoding": {
+                        "x": { "field": "Year", "type": "ordinal" },
+                        "y": { "field": "Prescriptions", "type": "quantitative" },
+                        "text": { "value": "Lowest number" }
+                    }
+                },
+                {
+                    "transform": [
+                        {
+                            "filter": "Age_bracket == 'Total' && datum.Year == '2022' && datum.Gender == 'Female'"
+                        }
+                    ],
+                    "mark": {
+                        "type": "text",
+                        "align": "left",
+                        "dx": -60,
+                        "dy": 30,
+                        "fontSize": 12,
+                        "fontStyle": "italic",
+                        "color": "grey"
+                    },
+                    "encoding": {
+                        "x": { "field": "Year", "type": "ordinal" },
+                        "y": { "field": "Prescriptions", "type": "quantitative" },
+                        "text": { "value": "of prescriptions" }
+                    }
+                },
+                {
+                    "transform": [
+                        {
+                            "filter": "Age_bracket == 'Total' && datum.Year == '2022' && datum.Gender == 'Female'"
+                        }
+                    ],
+                    "mark": {
+                        "type": "text",
+                        "align": "left",
+                        "dx": -35,
+                        "dy": 45,
+                        "fontSize": 12,
+                        "fontStyle": "italic",
+                        "color": "grey"
+                    },
+                    "encoding": {
+                        "x": { "field": "Year", "type": "ordinal" },
+                        "y": { "field": "Prescriptions", "type": "quantitative" },
+                        "text": { "value": "dispensed" }
+                    }
+                }
+            ]
+        }
+
+
+
+            ;
+
+        // Embed the fourth visualization in the #fourth-visualisation div
+        vegaEmbed('#fourth-visualisation', fourthSpec).then(function (result) {
+            // Access the Vega view instance as result.view
+        }).catch(console.error);
+
+    </script>
+
+</body>
+
+</html>
