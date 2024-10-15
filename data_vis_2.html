@@ -306,7 +306,7 @@
                 },
                 "tooltip": [
                     { "field": "State/Territory", "type": "nominal", "title": "State/Territory" },
-                    { "field": "Prescriptions", "type": "quantitative", "title": "Number of Prescriptions" }
+                    { "field": "Prescriptions", "type": "quantitative", "title": "Number of Prescriptions", "format": ","}
                 ]
             },
             "config": {}
@@ -373,7 +373,8 @@
                     {
                         "field": "Prescriptions",
                         "type": "quantitative",
-                        "title": "Prescriptions"
+                        "title": "Prescriptions",
+                        "format": ","
                     }
                 ]
             },
@@ -439,7 +440,7 @@
             "tooltip": [
               {"field": "Year", "title": "Financial Year"},
               {"field": "Medicine", "title": "Medicine"},
-              {"field": "Prescriptions", "title": "Prescriptions"}
+              {"field": "Prescriptions", "title": "Prescriptions", "format": ","}
             ]
           }
         }
@@ -475,7 +476,7 @@
         },
         "tooltip": [
           {"field": "Year", "title": "Financial Year"},
-          {"field": "Prescriptions", "title": "Prescriptions"}
+          {"field": "Prescriptions", "title": "Prescriptions", "format": ","}
         ]
       }
     }
@@ -546,8 +547,8 @@
                     {"field": "Product", "title": "Product"},
                     {
                         "field": "Value",
-                        "title": "Percentage of Population",
-                        "format": ".1f",   /* Display one decimal place */
+                        "title": "Percentage of Population (%)",
+                        "format": ".1f",  
                         "formatType": "number"
                     }
                 ]
@@ -704,7 +705,7 @@
       "encoding": {
         "tooltip": [
           {"field": "Year", "type": "ordinal", "title": "Year"},
-          {"field": "Prescriptions", "type": "quantitative", "title": "Prescriptions"},
+          {"field": "Prescriptions", "type": "quantitative", "title": "Prescriptions", "format": ","},
           {"field": "Age", "type": "nominal", "title": "Age Group"}
         ]
       }
@@ -912,7 +913,7 @@
         },
         "tooltip": [
           {"field": "Year", "type": "ordinal"},
-          {"field": "Prescriptions", "type": "quantitative"},
+          {"field": "Prescriptions", "type": "quantitative","format": ","},
           {"field": "Gender", "type": "nominal"},
           {"field": "Age_Range", "type": "nominal", "title": "Age Bracket"}
         ]
