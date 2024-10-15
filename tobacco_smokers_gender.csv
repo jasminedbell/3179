@@ -1,11 +1,11 @@
 ﻿Behaviour,Males,Females
 "Successfully given up smoking (for more than a
-month)",0.2,0.1
-Tried to give up unsuccessfully,0.2,0.2
-Changed to a brand with lower tar or nicotine content,0.1,0.1
+month)",0.15,0.13
+Tried to give up unsuccessfully,0.21,0.20
+Changed to a brand with lower tar or nicotine content,0.07,0.07
 "Tried to change to a brand with lower tar or nicotine
-content, but were unsuccessful",0.0,0.0
-Reduced the amount of tobacco you smoke in a day,0.3,0.3
+content, but were unsuccessful",0.02,0.02
+Reduced the amount of tobacco you smoke in a day,0.28,0.29
 "Tried to reduce the amount of tobacco you smoked
-in a day, but were unsuccessful",0.1,0.1
-None of these,0.2,0.2
+in a day, but were unsuccessful",0.10,0.12
+None of these,0.17,0.17
